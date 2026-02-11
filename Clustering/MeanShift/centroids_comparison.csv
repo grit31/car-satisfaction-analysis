@@ -1,0 +1,4 @@
+﻿buying,maint,doors,persons,lug_boot,safety,聚类模型
+high,med,3,4,med,med,K=4
+high,high,4,4,med,med,K=2
+med,med,3,4,med,med,K=2

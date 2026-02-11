@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>选择题练习</title>
+    <style>
+        body { font-family: sans-serif; padding: 20px; }
+        .question { margin-bottom: 30px; }
+        .explanation { display: none; color: red; }
+    </style>
+</head>
+<body>
+    <h1>选择题练习</h1>
+
+    <div class="question" id="q0">
+        <p><b>1. 下列哪个是 Python 的关键字？</b></p>
+    
+        <button onclick="checkAnswer(0, 0)">function</button><br>
+        
+        <button onclick="checkAnswer(0, 1)">define</button><br>
+        
+        <button onclick="checkAnswer(0, 2)">def</button><br>
+        
+        <button onclick="checkAnswer(0, 3)">lambda</button><br>
+        
+        <p class="explanation" id="exp0">def 是定义函数的关键字。function 不是 Python 关键字。</p>
+    </div>
+    
+<script>
+    const answers = [2];
+
+    function checkAnswer(qid, selected) {
+        const correct = answers[qid];
+        const exp = document.getElementById("exp" + qid);
+        if (selected == correct) {
+            exp.style.color = 'green';
+            exp.innerText = "✅ 正确！";
+        } else {
+            exp.style.color = 'red';
+            exp.innerText = "❌ 错误！" + exp.innerText;
+        }
+        exp.style.display = "block";
+    }
+</script>
+</body>
+</html>
